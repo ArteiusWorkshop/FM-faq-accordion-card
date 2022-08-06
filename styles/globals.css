@@ -1,0 +1,40 @@
+.MuiTypography-root {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.inactive {
+  font-weight: 700;
+  color: hsl(237, 14%, 72%);
+}
+
+.active {
+  font-weight: 700;
+  color: hsl(240, 29%, 7%);
+}
+
+.faq {
+  font-weight: 400;
+  color: hsl(240, 6%, 50%);
+  font-size: 15px;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.back {
+  background-image: url("/img/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.backD {
+  background-image: url("/img/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-x: 129%;
+  background-position-y: 70%;
+}
+
+.inactive:hover {
+  color: hsl(14, 88%, 65%);
+}
