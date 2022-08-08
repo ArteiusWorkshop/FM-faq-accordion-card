@@ -8,6 +8,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import Image from "next/image";
+import { log } from "console";
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} {...props} />
@@ -57,18 +58,16 @@ const AccordionDetails = styled(MuiAccordionDetails)(() => ({
 
 export const AccordionD = () => {
   const [expanded, setExpanded] = useState<string | false>("");
-
+  const [first, setFirst] = useState("-90px");
   const handleChange =
     (panel: string) => (event: SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
-      first == "230px" ? setfirst("200px") : setfirst("230px");
     };
 
-  const [first, setfirst] = useState("230px");
-
-  const handleMouseOver = () => {
-    first == "230px" ? setfirst("200px") : setfirst("230px");
+  const handleHover = () => {
+    first === "-90px" ? setFirst("-110px") : setFirst("-90px");
   };
+
   return (
     <Box
       minHeight="510px"
@@ -81,7 +80,6 @@ export const AccordionD = () => {
         borderRadius: "25px",
         overflow: "hidden",
       }}
-      onMouseOver={handleMouseOver}
     >
       <Box height="100%" width="470px" className="backD">
         <Box position="relative" left="-65px" top="80px">
@@ -91,7 +89,7 @@ export const AccordionD = () => {
             src="/img/illustration-woman-online-desktop.svg"
           />
         </Box>
-        <Box position="absolute" left={first} top="430px">
+        <Box position="fixed" marginTop="-90px" marginLeft={first}>
           <Image
             width="150px"
             height="130px"
@@ -106,16 +104,18 @@ export const AccordionD = () => {
         flexDirection="column"
         justifyContent="center"
       >
+        <Typography variant="h4" fontWeight={700} pl={2} pb={4}>
+          FAQ
+        </Typography>
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
         >
-          <Typography variant="h4" fontWeight={700} pl={2} pb={4}>
-            FAQ
-          </Typography>
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <Typography
               className={expanded === "panel1" ? "active" : "inactive"}
+              onMouseOver={handleHover}
+              onMouseOut={handleHover}
             >
               How many team members can I invite?
             </Typography>
@@ -134,6 +134,8 @@ export const AccordionD = () => {
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
             <Typography
               className={expanded === "panel2" ? "active" : "inactive"}
+              onMouseOver={handleHover}
+              onMouseOut={handleHover}
             >
               What is the maximum file upload size?
             </Typography>
@@ -152,6 +154,8 @@ export const AccordionD = () => {
           <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
             <Typography
               className={expanded === "panel3" ? "active" : "inactive"}
+              onMouseOver={handleHover}
+              onMouseOut={handleHover}
             >
               How do I reset my password?
             </Typography>
@@ -170,6 +174,8 @@ export const AccordionD = () => {
           <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
             <Typography
               className={expanded === "panel4" ? "active" : "inactive"}
+              onMouseOver={handleHover}
+              onMouseOut={handleHover}
             >
               Can I cancel my subscription?
             </Typography>
@@ -188,6 +194,8 @@ export const AccordionD = () => {
           <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
             <Typography
               className={expanded === "panel5" ? "active" : "inactive"}
+              onMouseOver={handleHover}
+              onMouseOut={handleHover}
             >
               Do you provide additional support?
             </Typography>
