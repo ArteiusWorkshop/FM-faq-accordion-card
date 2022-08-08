@@ -25,13 +25,14 @@ Users should be able to:
 
 ### Screenshot
 
-![Screen 1](./Screenshot_1.png)
-![Screen 2](./Screenshot_2.png)
+![Screen 1](./screenshot1.jpg)
+![Screen 2](./screenshot2.jpg)
+![Screen 3](./screenshot3.jpg)
 
 ### Links
 
-- Solution URL: [Solution URL here](https://github.com/ArteiusWorkshop/FM-interactive-rating-component)
-- Live Site URL: [Live site URL here](https://fm-interactive-rating-component-ql3l17wjw-arteiusworkshop.vercel.app/)
+- Solution URL: [Solution URL here](https://github.com/ArteiusWorkshop/FM-faq-accordion-card)
+- Live Site URL: [Live site URL here](https://fm-faq-accordion-card-eosin.vercel.app/)
 
 ## My process
 
